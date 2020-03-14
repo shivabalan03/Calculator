@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="Assets/boostrap/bootstrap.min.css">
+        <script src="Assets/boostrap/jquery.min.js"></script>
+        <script src="Assets/boostrap/bootstrap.min.js"></script>
+        <script src="Assets/Main.js"></script>
+        <script src="Assets/Formula.js"></script>
+        <script>
+            function checkValid(evt, element){
+                  var charCode = (evt.which) ? evt.which : evt.keyCode;
+                  if (charCode > 31 && (charCode < 48 || charCode > 57) && !(charCode == 46 || charCode == 8 || charCode == 40 || charCode == 41 || charCode == 42 || charCode == 43 || charCode == 45 || charCode == 47)){
+                        return false;
+                  } else {
+                        return true;
+                  }
+            }
+      </script>
+    </head>
+    <body>
+    <div class="container col-md-offset-4 col-md-4"> 
+        <p class="lead text-success">Calculator</p>       
+    <table class="table table-bordered" id="tblCalculator">
+        <thead><tr><td colspan="5"><input class="form-control text-right" type="text" id="txtDisplay" name="txtDisplay" id="txtDisplay" onkeypress="return checkValid(event, this)"></td></tr></thead>
+        <tbody>
+            <tr>
+                <td><button type="button" class="btn btn-default backSpace" id="btnBackSpace" title="Backspace"><center>Bksp</center></button></td>
+                <td><button type="button" class="btn btn-default" id="btnEnter" title="Enter"><center>Enter</center></button></td>
+                <td><button type="button" class="btn btn-default clear" id="btnClear" title="Clear"><center>Clear</center></button></td>
+                <td colspan="2">
+                    <select id="calcType" class="form-control" >
+                        <option name="Basic">Basic</option>
+                        <option name="Advanced">Advanced</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+      	      <td><button type="button" class="btn btn-default" id="btnExp" title="Exponential"><center>Exp</center></button></td>
+                <td><button type="button" class="btn btn-default Numbers" id="btnSevan" title="Seven"><center>7</center></button></td>
+                <td><button type="button" class="btn btn-default Numbers" id="btnEight" title="Eight"><center>8</center></button></td>
+                <td><button type="button" class="btn btn-default Numbers" id="btnNine" title="Nine"><center>9</center></button></td>
+                <td><button type="button" class="btn btn-default Operators" id="btnFSlash" title="Forword Slash"><center>/</center></button></td>
+            </tr>
+            <tr>
+      		    <td><button type="button" class="btn btn-default" id="btnLog" title="Logarithm"><center>Log</center></button></td>
+                <td><button type="button" class="btn btn-default Numbers" id="btnFour" title="Four"><center>4</center></button></td>
+                <td><button type="button" class="btn btn-default Numbers" id="btnFive" title="Five"><center>5</center></button></td>
+                <td><button type="button" class="btn btn-default Numbers" id="btnSix" title="Six"><center>6</center></button></td>
+                <td><button type="button" class="btn btn-default Operators" id="btnMultiply" title="Multiple"><center>*</center></button></td>
+            </tr>
+            <tr>
+          		<td><button type="button" class="btn btn-default" id="btnSqrt" title="Square"><center>Sqrt</center></button></td>
+                <td><button type="button" class="btn btn-default Numbers" id="btnOne Numbers" title="One"><center>1</center></button></td>
+                <td><button type="button" class="btn btn-default Numbers" id="btnTwo Numbers" title="Two"><center>2</center></button></td>
+                <td><button type="button" class="btn btn-default Numbers" id="btnThree Numbers" title="Three"><center>3</center></button></td>
+                <td><button type="button" class="btn btn-default Operators" id="btnMinus" title="Minus"><center>-</center></button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="btn btn-default Numbers" id="btnPercentage" title="Percentage"><center>%</center></button></td>
+                <td><button type="button" class="btn btn-default Numbers" id="btnZero" title="Zero"><center>0</center></button></td>
+                <td><button type="button" class="btn btn-default Numbers" id="btnDot" title="Dot"><center>.</center></button></td>
+                <td><button type="button" class="btn btn-info" id="btnEnter" title="Equal"><center>=</center></button></td>
+                <td><button type="button" class="btn btn-default Operators" id="btnPlus" title="Plus"><center>+</center></button></td>
+            </tr>
+            <tr>
+      		    <td><button type="button" class="btn btn-default Numbers" id="btnOpenBracket" title="Open bracket"><center>(</center></button></td>
+                <td><button type="button" class="btn btn-default MathOperation"  id="btnCos" title="cos"><center>cos</center></button></td>
+                <td><button type="button" class="btn btn-default MathOperation" id="btnSin" title="sin"><center>sin</center></button></td>
+                <td><button type="button" class="btn btn-default MathOperation" id="btnTan" title="tan"><center>tan</center></button></td>
+                <td><button type="button" class="btn btn-default Numbers" id="btnCloseBranket" title="Close bracket"><center>)</center></button></td>
+            </tr>
+            <tr>
+      	        <td colspan="5">
+                    <button type="button" class="btn btn-default advNumbers" id="btnZero" title="Zero"><center>0</center></button>
+                    <button type="button" class="btn btn-default advNumbers" id="btnTwo" title="One"><center>1</center></button>
+
+                    <button type="button" class="btn btn-default advNumbers"  id="btnTwo" title="Two"><center>2</center></button>
+                    <button type="button" class="btn btn-default advNumbers" id="btnThree" title="Three"><center>3</center></button>
+
+                    <button type="button" class="btn btn-default advNumbers"  id="btnFour" title="Four"><center>4</center></button>
+                    <button type="button" class="btn btn-default advNumbers" id="btnFive" title="Five"><center>5</center></button>
+
+                    <button type="button" class="btn btn-default advNumbers"  id="btnSix" title="Six"><center>6</center></button>
+                    <button type="button" class="btn btn-default advNumbers" id="btnSevan" title="Seven"><center>7</center></button>
+
+                    <button type="button" class="btn btn-default advNumbers"  id="btnEight" title="Eight"><center>8</center></button>
+                    <button type="button" class="btn btn-default advNumbers" id="btnNine" title="Nine"><center>9</center></button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <select id='ddConvertionType' class="form-control">
+                          <option name="ddArea" selected="1" value="Area">Area</option>
+                          <option name="ddLength"  value="Length">Length</option>
+                          <option name="ddPlaneAngle" value="Plane Angle">Plane Angle</option>
+                          <!-- <option name="ddElectrical" value="Electrical">Electrical</option>
+                          <option name="ddVolume"  value="Volume">Volume</option>
+                          <option name="ddTime"  value="Time">Time</option>
+                          <option name="ddMass"  value="Mass">Mass</option>
+                          <option name="ddPressure"  value="Pressure">Pressure</option>
+                          <option name="ddSpeed"  value="Speed">Speed</option>
+                          <option name="ddTemperature"  value="Temperature">Temperature</option>
+                          <option name="ddDataTransferRate"  value="Data Transfer Rate">Data Transfer Rate</option>
+                          <option name="ddDigitalStorage"  value="Digital Storage">Digital Storage</option>
+                          <option name="ddEnergy"  value="Energy">Energy</option>
+                          <option name="ddFrequency"  value="Frequency">Frequency</option>
+                          <option name="ddFuelEconomy"  value="Fuel Economy">Fuel Economy</option>-->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="text" class="form-control text-center" id="txtFromValue">
+                    <select id="ddFromData" class="form-control">
+                      <option name='Square metre'>Square metre</option>
+                      <option name='Square mile'>Square mile</option>
+                      <option name='Square yard'>Square yard</option>
+                      <option name='Square foot'>Square foot</option>
+                      <option name='Square inch'>Square inch</option>
+                      <option name='Hectare'>Hectare</option>
+                      <option name='Acre'>Acre</option>
+                  </select>
+              </td>
+              <td>
+                    <button type="button" class="btn btn-default" id="btnEqualTo" style="margin-top: 25%; margin-left:25%" title="EqualTo">=</button>
+              </td>
+              <td colspan="2">
+                    <input type="text" class="form-control text-center" id="txtToValue">
+                    <select id="ddToData" class="form-control">
+                          <option name='Square metre'>Square metre</option>
+                          <option name='Square mile'>Square mile</option>
+                          <option name='Square yard'>Square yard</option>
+                          <option name='Square foot'>Square foot</option>
+                          <option name='Square inch'>Square inch</option>
+                          <option name='Hectare'>Hectare</option>
+                          <option name='Acre'>Acre</option>
+                    </select>
+              </td>
+          </tr>
+          <tr colspan="5">
+                <td  colspan="5">
+                    <input type="number" class="form-control" id="txtPower" placeholder="Power">
+                    <input type="number" class="form-control" id="txtVolts" placeholder="Volts">
+                    <input type="number" class="form-control" id="txtAmphere" placeholder="Amphere">
+                    <input type="number" class="form-control" id="txtResistence" placeholder="Resistence">
+                </td>
+            </tr>
+  </tbody>
+  <tfoot>
+        <tr>
+            <td colspan="5" id="lblErrorLog" class="text-info"></td>
+        </tr>
+  </tfoot>
+  </table>
+</div>
+</body>
+</html>
